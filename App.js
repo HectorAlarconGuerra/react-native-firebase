@@ -10,7 +10,7 @@ import UsersList from "./screens/UsersList";
 import CreateUserScreen from "./screens/CreateUserScreen";
 import UserDetailScreen from "./screens/UserDetailScreen";
 
-function myStack() {
+function MyStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="UsersList" component={UsersList} />
@@ -21,7 +21,11 @@ function myStack() {
 }
 
 export default function App() {
-  return <NavigationContainer></NavigationContainer>;
+  return (
+    <NavigationContainer>
+      <MyStack />
+    </NavigationContainer>
+  );
 }
 
 const styles = StyleSheet.create({
